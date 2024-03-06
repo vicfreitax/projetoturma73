@@ -5,11 +5,15 @@ import java.util.Scanner;
 public class ListaLacoRepeticaoFOR {
 
 	public static void main(String[] args) {
+		/*Escreva um algoritmo em Java, que leia 2 números inteiros via teclado, onde o primeiro número 
+		 * deve ser menor do que o segundo número. Caso contrário, deve ser exibida uma mensagem na 
+		 * tela informando que o intervalo é inválido e sair do programa. 
+		 No intervalo informado, mostre na tela todes os números que são múltiplos de 3 e 5.*/
 		
 		Scanner read = new Scanner(System.in);
 		
 		// Declaração de Variáveis
-		int a, b, contador=0, intervalo=0, numero=0;
+		int a=0, b, contador=0;
 		
 		// Entrada de Dados
 		System.out.println("Digite o valor do primeiro número: ");
@@ -23,10 +27,14 @@ public class ListaLacoRepeticaoFOR {
 			System.out.println("Intervalo inválido!");
 		}
 		else {
-			System.out.println("No intervalo entre "+ a + " e "+ b + ":");
-			intervalo= b-a;
-			for(contador=0; intervalo<=contador; contador++) {
-			numero = intervalo-- ;
+		
+			for(contador=a; contador<=b; contador++) {
+			
+				if (contador%3==0 && contador%5==0) {
+					
+					System.out.println(contador +" é divisível por 3 e por 5!");
+				}
+			
 			}
 		}
 
